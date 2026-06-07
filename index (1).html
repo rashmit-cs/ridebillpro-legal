@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RideBill Pro – GST Invoice Generator for Indian Taxi Operators</title>
+  <meta name="description" content="RideBill Pro is a GST-compliant cab invoice generator for Indian taxi operators, fleet owners, travel agencies and transport contractors. Offline. Private. Professional." />
+  <meta name="keywords" content="GST invoice app, taxi billing app, cab invoice generator, transport billing India, fleet management app, RideBill Pro" />
+  <meta name="author" content="RideBill Pro" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="RideBill Pro – GST Invoice Generator" />
+  <meta property="og:description" content="Professional GST cab billing for Indian taxi operators. Offline, private, no login required." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rashmit-cs.github.io/ridebillpro-legal/" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://rashmit-cs.github.io/ridebillpro-legal/" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "RideBill Pro",
+    "operatingSystem": "Android",
+    "applicationCategory": "BusinessApplication",
+    "description": "GST-compliant cab invoice generator for Indian taxi operators",
+    "offers": [
+      { "@type": "Offer", "price": "0", "priceCurrency": "INR", "name": "Free Plan" },
+      { "@type": "Offer", "price": "99", "priceCurrency": "INR", "name": "Pro Plan" }
+    ]
+  }
+  </script>
+  <style>
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -20%; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(ellipse, rgba(200,151,58,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 32px;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 5.2rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      max-width: 820px;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub {
+      margin-top: 24px;
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--text-dim);
+      max-width: 540px;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+    .hero-cta {
+      margin-top: 44px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+    /* mockup */
+    .mockup-strip { margin-top: 64px; padding: 0 24px; animation: fadeUp 0.7s 0.4s ease both; }
+    .mockup-card {
+      max-width: 720px; margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(200,151,58,0.06);
+    }
+    .mockup-topbar { background: var(--gold); padding: 12px 20px; }
+    .mockup-topbar-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: #0D0B07; }
+    .mockup-body { padding: 24px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .mockup-field { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; }
+    .mockup-field-label { font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+    .mockup-field-val { font-size: 0.85rem; color: var(--text); }
+    .mockup-field-val.gold { color: var(--gold); font-weight: 500; }
+    .mockup-total {
+      grid-column: 1/-1;
+      background: rgba(200,151,58,0.08);
+      border: 1px solid rgba(200,151,58,0.3);
+      border-radius: 8px; padding: 14px 16px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .mockup-total-label { font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; }
+    .mockup-total-val { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--gold); }
+
+    /* features */
+    #features { background: var(--bg2); }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .feat-icon { font-size: 1.6rem; margin-bottom: 16px; }
+    .feat-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+    .feat-desc { font-size: 0.88rem; color: var(--text-dim); line-height: 1.65; }
+
+    /* steps */
+    #how { background: var(--bg); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .step { padding: 32px 24px; border-left: 1px solid var(--border); }
+    .step:first-child { border-left: none; }
+    .step-num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: rgba(200,151,58,0.12); line-height: 1; margin-bottom: 12px; }
+    .step-title { font-weight: 500; font-size: 0.95rem; margin-bottom: 8px; }
+    .step-desc { font-size: 0.85rem; color: var(--text-dim); }
+
+    /* who */
+    #who { background: var(--bg2); }
+    .who-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+    .who-tag { background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 10px 20px; font-size: 0.88rem; color: var(--text-dim); display: flex; align-items: center; gap: 8px; }
+    .who-tag span { color: var(--gold); }
+
+    /* cta band */
+    .cta-band { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .cta-band-inner { max-width: var(--max-w); margin: 0 auto; padding: 64px 24px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+    .cta-band h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); max-width: 480px; }
+    .cta-band-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    @media (max-width: 768px) {
+      .mockup-body { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .step { border-left: none; border-top: 1px solid var(--border); }
+      .step:first-child { border-top: none; }
+      .hero-cta { flex-direction: column; align-items: center; }
+      .cta-band-inner { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">RideBill Pro</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://play.google.com/store/apps/details?id=com.ridebillpro.app" target="_blank" rel="noopener" class="nav-cta">Download</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-drawer" id="navDrawer">
+    <a href="index.html" class="drawer-link">Home</a>
+    <a href="pricing.html" class="drawer-link">Pricing</a>
+    <a href="about.html" class="drawer-link">About</a>
+    <a href="support.html" class="drawer-link">Support</a>
+    <a href="contact.html" class="drawer-link">Contact</a>
+    <a href="https://play.google.com/store/apps/details?id=com.ridebillpro.app" target="_blank" rel="noopener" class="drawer-link">↗ Download App</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-badge">Now on Google Play Store</div>
+  <h1>GST Invoicing for <em>Indian Taxi</em> Operators</h1>
+  <p class="hero-sub">RideBill Pro generates professional, GST-compliant cab invoices — offline, private, and built for the real-world billing workflow of Indian fleet operators.</p>
+  <div class="hero-cta">
+    <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.ridebillpro.app" target="_blank" rel="noopener">▶ Download Free on Play Store</a>
+    <a class="btn-secondary" href="pricing.html">View Plans →</a>
+  </div>
+  <div class="mockup-strip">
+    <div class="mockup-card">
+      <div class="mockup-topbar"><div class="mockup-topbar-title">🧾 RideBill Pro — New Invoice</div></div>
+      <div class="mockup-body">
+        <div class="mockup-field"><div class="mockup-field-label">Customer Name</div><div class="mockup-field-val">Rajesh Mehta</div></div>
+        <div class="mockup-field"><div class="mockup-field-label">Trip Type</div><div class="mockup-field-val">Local Package</div></div>
+        <div class="mockup-field"><div class="mockup-field-label">Vehicle</div><div class="mockup-field-val">GJ01 AB 1234 · Innova</div></div>
+        <div class="mockup-field"><div class="mockup-field-label">Extra KM Rate</div><div class="mockup-field-val">₹12 / km</div></div>
+        <div class="mockup-field"><div class="mockup-field-label">GST</div><div class="mockup-field-val gold">5% (Corporate)</div></div>
+        <div class="mockup-field"><div class="mockup-field-label">Toll + Parking</div><div class="mockup-field-val">₹180</div></div>
+        <div class="mockup-total">
+          <div class="mockup-total-label">Grand Total</div>
+          <div class="mockup-total-val">₹ 2,436</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ── -->
+<section id="features">
+  <div class="section-inner">
+    <div class="section-label">Features</div>
+    <h2 class="section-title">Everything a taxi operator actually needs</h2>
+    <p class="section-sub">Designed around real Indian cab billing — not a generic invoice app.</p>
+    <div class="features-grid">
+      <div class="card"><div class="feat-icon">📄</div><div class="feat-title">GST-Compliant Invoices</div><div class="feat-desc">Optional 5% GST on corporate bills. Includes GSTIN, SAC code, and proper tax breakup.</div></div>
+      <div class="card"><div class="feat-icon">📦</div><div class="feat-title">Package Rate Billing</div><div class="feat-desc">Fixed package (km + hr bundle), extra km rate, extra hour rate — exactly how physical bill books work.</div></div>
+      <div class="card"><div class="feat-icon">➕</div><div class="feat-title">All Extra Charges</div><div class="feat-desc">Toll, parking, waiting, night charge, airport fee, ferry, hill surcharge, driver bata, state tax and more.</div></div>
+      <div class="card"><div class="feat-icon">📋</div><div class="feat-title">Trip Log & CSV Export</div><div class="feat-desc">Date, Customer, Drop Point, Time, Vehicle No., Amount. Export to Excel CSV anytime.</div></div>
+      <div class="card"><div class="feat-icon">🔒</div><div class="feat-title">100% Offline & Private</div><div class="feat-desc">No cloud, no login, no account. All data stays on your device. Works without internet.</div></div>
+      <div class="card"><div class="feat-icon">🚗</div><div class="feat-title">Fleet Management</div><div class="feat-desc">Manage multiple vehicles, track vehicle-wise trip history and analytics dashboard.</div></div>
+      <div class="card"><div class="feat-icon">🖨️</div><div class="feat-title">PDF Invoice Generation</div><div class="feat-desc">Share professional PDF invoices via WhatsApp or print directly. Clean branded layout.</div></div>
+      <div class="card"><div class="feat-icon">📊</div><div class="feat-title">Analytics Dashboard</div><div class="feat-desc">Revenue overview, trip counts, and vehicle performance — at a glance.</div></div>
+      <div class="card"><div class="feat-icon">🏢</div><div class="feat-title">Company Profile</div><div class="feat-desc">Set your company name, GSTIN, address once. Auto-fills every invoice.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section id="how">
+  <div class="section-inner">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">Bill in under a minute</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">01</div><div class="step-title">Enter Trip Details</div><div class="step-desc">Pick trip type, vehicle, customer name, pick-up and drop point.</div></div>
+      <div class="step"><div class="step-num">02</div><div class="step-title">Set Package Rate</div><div class="step-desc">Enter your fixed package, extra km rate, and extra hour rate.</div></div>
+      <div class="step"><div class="step-num">03</div><div class="step-title">Add Extra Charges</div><div class="step-desc">Toll, parking, waiting, night — tap what applies, app calculates total.</div></div>
+      <div class="step"><div class="step-num">04</div><div class="step-title">Share or Print</div><div class="step-desc">PDF invoice ready instantly. Send via WhatsApp or email in one tap.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHO IT'S FOR ── -->
+<section id="who">
+  <div class="section-inner">
+    <div class="section-label">Who It's For</div>
+    <h2 class="section-title">Built for the Indian transport ecosystem</h2>
+    <div class="who-grid">
+      <div class="who-tag"><span>🚕</span> Individual Taxi Drivers</div>
+      <div class="who-tag"><span>🚐</span> Fleet Owners</div>
+      <div class="who-tag"><span>✈️</span> Travel Agencies</div>
+      <div class="who-tag"><span>🚌</span> Bus Operators</div>
+      <div class="who-tag"><span>🏗️</span> Transport Contractors</div>
+      <div class="who-tag"><span>🏢</span> Corporate Cab Operators</div>
+      <div class="who-tag"><span>🏔️</span> Hill Station Taxi Stands</div>
+      <div class="who-tag"><span>📱</span> Small Fleet Managers</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ── -->
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <h2>Start billing professionally — <em style="font-style:italic;color:var(--gold)">free.</em></h2>
+    <div class="cta-band-btns">
+      <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.ridebillpro.app" target="_blank" rel="noopener">▶ Get on Play Store</a>
+      <a class="btn-secondary" href="pricing.html">See Plans</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="footer-logo" href="index.html">RideBill Pro</a>
+      <p>GST-compliant cab invoice generator for Indian taxi operators. Offline. Private. Professional.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.ridebillpro.app" target="_blank" rel="noopener">Play Store</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="support.html">Help Center</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="mailto:tech.support.dev@gmail.com">tech.support.dev@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 RideBill Pro · com.ridebillpro.app · v1.0.0</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="contact.html">Contact</a></span>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const drawer = document.getElementById('navDrawer');
+  btn.addEventListener('click', () => {
+    const open = drawer.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', () => {
+    drawer.classList.remove('open'); btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', false); document.body.style.overflow = '';
+  }));
+</script>
+</body>
+</html>

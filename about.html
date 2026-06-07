@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – RideBill Pro</title>
+  <meta name="description" content="About RideBill Pro — the story behind India's privacy-first GST cab invoice generator." />
+  <link rel="canonical" href="https://rashmit-cs.github.io/ridebillpro-legal/about.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .about-body { max-width: 720px; margin: 0 auto; padding: 72px 24px 96px; position: relative; z-index: 1; }
+    .about-body p { font-size: 1rem; color: var(--text-dim); line-height: 1.85; margin-bottom: 20px; }
+    .about-body h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--text); margin: 48px 0 14px; }
+    .about-body strong { color: var(--text); font-weight: 500; }
+
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 32px; }
+    .value-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 20px; }
+    .value-icon { font-size: 1.5rem; margin-bottom: 12px; }
+    .value-title { font-weight: 500; font-size: 0.95rem; margin-bottom: 6px; }
+    .value-desc { font-size: 0.85rem; color: var(--text-dim); }
+
+    .app-info { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+    .info-row { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px 18px; }
+    .info-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 4px; }
+    .info-val { font-size: 0.9rem; color: var(--text); }
+    @media (max-width: 480px) { .app-info { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">RideBill Pro</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://play.google.com/store/apps/details?id=com.ridebillpro.app" target="_blank" rel="noopener" class="nav-cta">Download</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-drawer" id="navDrawer">
+    <a href="index.html" class="drawer-link">Home</a>
+    <a href="pricing.html" class="drawer-link">Pricing</a>
+    <a href="about.html" class="drawer-link">About</a>
+    <a href="support.html" class="drawer-link">Support</a>
+    <a href="contact.html" class="drawer-link">Contact</a>
+    <a href="https://play.google.com/store/apps/details?id=com.ridebillpro.app" target="_blank" rel="noopener" class="drawer-link">↗ Download App</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-badge">About</div>
+  <h1>Built for the Road</h1>
+  <p>The story behind RideBill Pro — a billing tool designed around how Indian taxi operators actually work.</p>
+</div>
+
+<div class="about-body">
+
+  <h2>Why RideBill Pro?</h2>
+  <p>Indian taxi operators — from single cab drivers to multi-vehicle fleet owners — have long relied on paper bill books and manual calculations. When GST compliance became mandatory, the problem got harder: most generic invoice apps don't understand local package rates, hill station surcharges, driver bata, or the difference between personal and corporate trips.</p>
+  <p>RideBill Pro was built to fix that. Not a generic invoice app with taxi labels slapped on — a billing tool designed from the ground up around the real-world workflow of Indian transport operators.</p>
+
+  <h2>Privacy First</h2>
+  <p>From day one, the decision was made: <strong>no cloud, no login, no account required.</strong> All billing data lives on your device only, stored in a local Room database. Your customers' trip details, your company financials, your GSTIN — none of it leaves your phone.</p>
+  <p>This isn't just a privacy feature. It means the app works in remote hills, on highways with no signal, and in areas with unreliable internet — because it doesn't need any.</p>
+
+  <h2>Our Values</h2>
+  <div class="values-grid">
+    <div class="value-card"><div class="value-icon">🔒</div><div class="value-title">Privacy by Design</div><div class="value-desc">Zero data collection. Your business data stays on your device.</div></div>
+    <div class="value-card"><div class="value-icon">📶</div><div class="value-title">Offline First</div><div class="value-desc">Works anywhere — highways, hills, remote routes, no signal.</div></div>
+    <div class="value-card"><div class="value-icon">🇮🇳</div><div class="value-title">Built for India</div><div class="value-desc">GST-ready, local billing logic, Indian transport workflows.</div></div>
+    <div class="value-card"><div class="value-icon">⚡</div><div class="value-title">Fast & Simple</div><div class="value-desc">Generate a complete GST invoice in under a minute.</div></div>
+  </div>
+
+  <h2>App Information</h2>
+  <div class="app-info">
+    <div class="info-row"><div class="info-label">App Name</div><div class="info-val">RideBill Pro</div></div>
+    <div class="info-row"><div class="info-label">Package Name</div><div class="info-val">com.ridebillpro.app</div></div>
+    <div class="info-row"><div class="info-label">Platform</div><div class="info-val">Android</div></div>
+    <div class="info-row"><div class="info-label">Version</div><div class="info-val">1.0.0</div></div>
+    <div class="info-row"><div class="info-label">Category</div><div class="info-val">Business / Transport</div></div>
+    <div class="info-row"><div class="info-label">Data Storage</div><div class="info-val">Local (Room Database)</div></div>
+    <div class="info-row"><div class="info-label">Login Required</div><div class="info-val">No</div></div>
+    <div class="info-row"><div class="info-label">Internet Required</div><div class="info-val">No</div></div>
+  </div>
+
+  <h2>Contact</h2>
+  <p>Questions, feedback, or partnership enquiries — reach out at <a href="mailto:tech.support.dev@gmail.com" style="color:var(--gold)">tech.support.dev@gmail.com</a>. We respond within 24–48 hours.</p>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><a class="footer-logo" href="index.html">RideBill Pro</a><p>GST-compliant cab invoice generator for Indian taxi operators. Offline. Private. Professional.</p></div>
+    <div class="footer-col"><h4>Product</h4><ul><li><a href="index.html">Home</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="about.html">About</a></li><li><a href="https://play.google.com/store/apps/details?id=com.ridebillpro.app" target="_blank" rel="noopener">Play Store</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="support.html">Help Center</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="mailto:tech.support.dev@gmail.com">Email Support</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 RideBill Pro · com.ridebillpro.app · v1.0.0</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="contact.html">Contact</a></span></div>
+</footer>
+
+<script>
+  const btn = document.getElementById('hamburger'), drawer = document.getElementById('navDrawer');
+  btn.addEventListener('click', () => { const o = drawer.classList.toggle('open'); btn.classList.toggle('open', o); btn.setAttribute('aria-expanded', o); document.body.style.overflow = o ? 'hidden' : ''; });
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', () => { drawer.classList.remove('open'); btn.classList.remove('open'); btn.setAttribute('aria-expanded', false); document.body.style.overflow = ''; }));
+</script>
+</body>
+</html>
