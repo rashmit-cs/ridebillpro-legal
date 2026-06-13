@@ -4,123 +4,161 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy – RideBill Pro</title>
-  <meta name="description" content="RideBill Pro Privacy Policy. All data is stored locally on your device. No data is collected, sold, or shared." />
+  <meta name="description" content="RideBill Pro Privacy Policy. All data is stored locally on your device. We do not collect, share, or sell any personal information." />
   <link rel="canonical" href="https://rashmit-cs.github.io/ridebillpro-legal/privacy.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <nav>
-  <div class="nav-inner">
-    <a class="nav-logo" href="index.html">RideBill Pro</a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="support.html">Support</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://play.google.com/store/apps/details?id=com.ridebillpro.app" target="_blank" rel="noopener" class="nav-cta">Download</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  </div>
-  <div class="nav-drawer" id="navDrawer">
-    <a href="index.html" class="drawer-link">Home</a>
-    <a href="pricing.html" class="drawer-link">Pricing</a>
-    <a href="about.html" class="drawer-link">About</a>
-    <a href="support.html" class="drawer-link">Support</a>
-    <a href="contact.html" class="drawer-link">Contact</a>
-    <a href="https://play.google.com/store/apps/details?id=com.ridebillpro.app" target="_blank" rel="noopener" class="drawer-link">↗ Download App</a>
-  </div>
+  <a href="index.html" class="nav-logo">RideBill<span>Pro</span></a>
+  <span class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</span>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="privacy.html" class="active">Privacy</a></li>
+    <li><a href="terms.html">Terms</a></li>
+    <li><a href="support.html">Support</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
 </nav>
 
-<div class="page-hero">
-  <div class="page-badge">Legal</div>
-  <h1>Privacy Policy</h1>
-  <p>Last updated: June 2025 · RideBill Pro (com.ridebillpro.app)</p>
+<div class="page-header">
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p>Last updated: June 2025 · Effective for RideBill Pro v1.0.0 and above</p>
+  </div>
 </div>
 
-<div class="legal-body">
+<section>
   <div class="legal-content">
 
-    <h2>Introduction</h2>
-    <p>RideBill Pro ("we", "our", or "the app") respects your privacy. This Privacy Policy explains how RideBill Pro handles information when you use our Android application.</p>
-    <p>RideBill Pro is designed as a fully offline, privacy-first application. <strong>No personal data is transmitted to any external server, cloud service, or third party.</strong></p>
+    <div class="highlight-box">
+      <strong>Summary in plain language:</strong> RideBill Pro stores all your data locally on your device using Room Database. We do not collect any personal information, do not require login, do not track your location, and do not share or sell any data. You have full control over your data at all times.
+    </div>
 
-    <h2>Information Stored Locally</h2>
-    <p>RideBill Pro stores the following information <strong>locally on your device only</strong>, using Android Room Database:</p>
-    <ul>
-      <li>Company Name</li>
-      <li>Owner Name</li>
-      <li>GSTIN (GST Identification Number)</li>
-      <li>Phone Number</li>
-      <li>Email Address</li>
-      <li>City, State, and Address</li>
-      <li>Bill and Invoice Records</li>
-      <li>Trip Logs</li>
-      <li>Vehicle Records</li>
-      <li>Subscription Status</li>
-    </ul>
-    <p>All of this data remains on your device at all times. It is never uploaded, synced, or shared with anyone.</p>
+    <h2>1. Who We Are</h2>
+    <p>RideBill Pro ("the App") is an Android application developed for transport operators, taxi owners, cab owners, fleet managers, bus operators, and travel agencies. The App is published on the Google Play Store under the package name <strong>com.ridebillpro.app</strong>.</p>
+    <p>For any privacy-related questions, contact us at: <a href="mailto:support@ridebillpro.app">support@ridebillpro.app</a></p>
 
-    <h2>Data We Do NOT Collect</h2>
-    <p>RideBill Pro does <strong>not</strong> collect, access, or transmit:</p>
+    <h2>2. Data We Do NOT Collect</h2>
+    <p>RideBill Pro is designed as a fully offline, privacy-first application. We explicitly do <strong>not</strong> collect, transmit, or store any of the following:</p>
     <ul>
-      <li>GPS Location or device location</li>
-      <li>Contacts or phone book data</li>
-      <li>SMS or call logs</li>
-      <li>Camera or microphone access</li>
-      <li>Device identifiers (IMEI, Advertising ID)</li>
-      <li>Browsing history or app usage data</li>
-      <li>Any biometric data</li>
+      <li>Your name, email address, or phone number</li>
+      <li>GPS location or device location data</li>
+      <li>Contacts from your phone</li>
+      <li>SMS or call log data</li>
+      <li>Device identifiers (IMEI, advertising ID)</li>
+      <li>Browsing history or app usage analytics</li>
+      <li>Payment card information</li>
+      <li>Photos or media from your gallery (unless you explicitly choose a logo image)</li>
     </ul>
 
-    <h2>Third-Party Services</h2>
-    <p>RideBill Pro does not integrate analytics platforms (e.g. Firebase Analytics, Google Analytics) or advertising SDKs.</p>
-    <p><strong>Google Play Billing:</strong> If you purchase a Pro subscription, payment processing is handled entirely by Google Play. We do not receive or store your payment details. Google's privacy policy applies to that transaction: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+    <h2>3. Data Stored Locally on Your Device</h2>
+    <p>All data you enter in the App is stored exclusively on your device using <strong>Android Room Database</strong> (SQLite). This data never leaves your device unless you explicitly export and share it yourself.</p>
+    <p>The following information is stored locally:</p>
+    <ul>
+      <li><strong>Company Profile:</strong> Company name, owner name, GSTIN, phone number, email, city, state, address, UPI ID, bank details, logo image path</li>
+      <li><strong>Bills:</strong> Invoice data including passenger details, trip details, fare breakdown, GST amounts, payment mode, bill number</li>
+      <li><strong>Trip Logs:</strong> Date, passenger name, pickup/drop points, vehicle number, amount, time</li>
+      <li><strong>Vehicle Records:</strong> Vehicle name, registration number, type, fuel type</li>
+      <li><strong>Subscription Status:</strong> Your current plan (Free or Pro), expiry date, and bill count for the current month — stored locally to enforce plan limits</li>
+    </ul>
 
-    <h2>Data Sharing</h2>
-    <p>RideBill Pro does <strong>not</strong> sell, rent, trade, or share your personal information with any third parties under any circumstances.</p>
+    <h2>4. Permissions We Request</h2>
+    <p>The App requests only the minimum permissions necessary to function:</p>
+    <ul>
+      <li><strong>INTERNET</strong> — Required for Google Play In-App Billing (subscription purchase verification) and in-app update checks. No personal data is transmitted.</li>
+      <li><strong>WRITE_EXTERNAL_STORAGE</strong> (Android ≤ 9 only) — Required to save exported PDF files to your device storage.</li>
+      <li><strong>READ_EXTERNAL_STORAGE</strong> (Android ≤ 12 only) — Required to read an image file if you choose to set a company logo.</li>
+      <li><strong>VIBRATE</strong> — Used for haptic feedback on button interactions. No data involved.</li>
+    </ul>
+    <p>The App does <strong>not</strong> request permissions for: Camera, Microphone, Contacts, Location, Phone, SMS, Bluetooth, or Biometrics.</p>
 
-    <h2>File Exports</h2>
-    <p>RideBill Pro allows you to export invoices as PDF files and trip logs as Excel/CSV files. These files are saved to your device storage. When you share them (e.g. via WhatsApp), you are responsible for where they are sent. The app has no control over data you voluntarily share externally.</p>
+    <h2>5. Google Play Billing</h2>
+    <p>The Pro subscription is processed through <strong>Google Play Billing</strong>. When you make a purchase:</p>
+    <ul>
+      <li>The payment transaction is handled entirely by Google Play. We do not receive, store, or process your payment card information.</li>
+      <li>Google Play returns a purchase token, which is stored locally on your device to verify your subscription status.</li>
+      <li>Google's own Privacy Policy applies to the billing transaction. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</li>
+    </ul>
 
-    <h2>Data Deletion</h2>
-    <p>You can permanently delete all locally stored data at any time using the <strong>Delete All Data</strong> option in Settings. This action is irreversible and removes all bills, trip logs, vehicle records, and profile information from your device.</p>
-    <p>Uninstalling the app also removes all locally stored data.</p>
+    <h2>6. PDF and File Export</h2>
+    <p>When you export a bill or trip log as a PDF, the file is generated entirely on your device using the iText library. The file is saved to your device storage and can be shared via any app you choose (WhatsApp, Email, etc.). We have no access to exported files or where you share them.</p>
 
-    <h2>Children's Privacy</h2>
-    <p>RideBill Pro is intended for adult transport professionals and business operators. The app is not directed at children under the age of 13. We do not knowingly collect any information from children.</p>
+    <h2>7. Internet Usage</h2>
+    <p>The App uses an internet connection only for:</p>
+    <ul>
+      <li>Google Play In-App Billing — to process subscription purchases</li>
+      <li>Google Play In-App Update — to notify you of available app updates</li>
+      <li>Google Play In-App Review — to display the app rating prompt</li>
+    </ul>
+    <p>None of your billing data, trip logs, or personal information is transmitted over the internet.</p>
 
-    <h2>Security</h2>
-    <p>Since all data is stored locally on your device, security depends on your device's own security settings (screen lock, encryption, etc.). We recommend keeping your device secure. We do not have access to your data and cannot recover it if lost.</p>
+    <h2>8. Data Deletion</h2>
+    <p>You have full control over your data. Within the App, under <strong>Settings → Delete All Data</strong>, you can permanently erase all bills, trip logs, vehicle records, and company profile data from your device in a single action. This action is irreversible.</p>
+    <p>Uninstalling the App from your device will also remove all locally stored data.</p>
 
-    <h2>Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date. Continued use of the app after changes constitutes acceptance of the revised policy.</p>
+    <h2>9. Data Sharing</h2>
+    <p>We do <strong>not</strong> share, sell, rent, or transfer any user data to third parties. Since all data is stored locally on your device, we do not have access to it in the first place.</p>
 
-    <h2>Contact</h2>
-    <p>For privacy-related questions or concerns, please contact us at:</p>
-    <p><strong>Email:</strong> <a href="mailto:tech.support.dev@gmail.com">tech.support.dev@gmail.com</a></p>
-    <p><strong>App:</strong> RideBill Pro · com.ridebillpro.app</p>
+    <h2>10. Children's Privacy</h2>
+    <p>RideBill Pro is intended for use by adults operating transport businesses. The App is not directed at children under the age of 13, and we do not knowingly collect any data from children.</p>
+
+    <h2>11. Security</h2>
+    <p>Since all data is stored locally on your device, its security depends on your device's own security measures (screen lock, encryption). We recommend keeping your device protected with a PIN, pattern, or biometric lock. The App's database is stored in the app's private storage directory, which is not accessible to other apps without root access.</p>
+
+    <h2>12. Changes to This Policy</h2>
+    <p>If we make material changes to this Privacy Policy, we will update the "Last updated" date at the top of this page and publish an updated version on the Play Store listing. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>13. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or how RideBill Pro handles data, please contact us:</p>
+    <ul>
+      <li>Email: <a href="mailto:support@ridebillpro.app">support@ridebillpro.app</a></li>
+      <li>Website: <a href="https://rashmit-cs.github.io/ridebillpro-legal/">https://rashmit-cs.github.io/ridebillpro-legal/</a></li>
+    </ul>
+
+    <div class="highlight-box" style="margin-top:32px;">
+      <strong>Google Play Data Safety Declaration:</strong> For the Play Store Data Safety section, declare: No data collected from users. Data is not shared with third parties. Data is not sold. Users can request deletion via Settings → Delete All Data within the app.
+    </div>
 
   </div>
-</div>
+</section>
 
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand"><a class="footer-logo" href="index.html">RideBill Pro</a><p>GST-compliant cab invoice generator for Indian taxi operators. Offline. Private. Professional.</p></div>
-    <div class="footer-col"><h4>Product</h4><ul><li><a href="index.html">Home</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="about.html">About</a></li><li><a href="https://play.google.com/store/apps/details?id=com.ridebillpro.app" target="_blank" rel="noopener">Play Store</a></li></ul></div>
-    <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
-    <div class="footer-col"><h4>Support</h4><ul><li><a href="support.html">Help Center</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="mailto:tech.support.dev@gmail.com">Email Support</a></li></ul></div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>RideBill<span>Pro</span></h3>
+      <p>Professional transport billing and GST invoicing for Android. Built for taxi operators, fleet managers, and transport businesses across India.</p>
+    </div>
+    <div class="footer-col">
+      <h4>App</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="footer-bottom"><span>© 2026 RideBill Pro · com.ridebillpro.app · v1.0.0</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="contact.html">Contact</a></span></div>
+  <div class="footer-bottom">
+    <span>© 2025 RideBill Pro. All rights reserved.</span>
+    <span>v1.0.0 · com.ridebillpro.app</span>
+  </div>
 </footer>
 
-<script>
-  const btn = document.getElementById('hamburger'), drawer = document.getElementById('navDrawer');
-  btn.addEventListener('click', () => { const o = drawer.classList.toggle('open'); btn.classList.toggle('open', o); btn.setAttribute('aria-expanded', o); document.body.style.overflow = o ? 'hidden' : ''; });
-  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', () => { drawer.classList.remove('open'); btn.classList.remove('open'); btn.setAttribute('aria-expanded', false); document.body.style.overflow = ''; }));
-</script>
 </body>
 </html>
