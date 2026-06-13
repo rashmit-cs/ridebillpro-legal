@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="theme-color" content="#0f1923" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pricing – RideBill Pro</title>
   <meta name="description" content="RideBill Pro pricing. Free plan with 10 bills/month. Pro plan at ₹99/month for unlimited bills, PDF export, analytics, and more." />
@@ -25,7 +26,7 @@
 
 <nav>
   <a href="index.html" class="nav-logo">RideBill<span>Pro</span></a>
-  <span class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</span>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="pricing.html" class="active">Pricing</a></li>
@@ -45,7 +46,7 @@
 
 <section>
   <div class="container">
-    <div class="pricing-grid" style="max-width:700px;margin:0 auto;">
+    <div class="pricing-grid">
 
       <div class="pricing-card">
         <div class="pricing-name">Free</div>
@@ -91,6 +92,7 @@
     </p>
 
     <!-- Feature comparison table -->
+    <div class="table-wrap">
     <table class="compare-table">
       <thead>
         <tr>
@@ -112,7 +114,7 @@
         <tr><td>All invoice themes</td><td><span class="check-no">✗</span></td><td class="pro-col"><span class="check-yes">✓</span></td></tr>
         <tr><td>No watermark</td><td><span class="check-no">✗</span></td><td class="pro-col"><span class="check-yes">✓</span></td></tr>
       </tbody>
-    </table>
+    </table></div>
 
   </div>
 </section>
@@ -151,6 +153,24 @@
     <span>v1.0.0 · com.ridebillpro.app</span>
   </div>
 </footer>
+
+
+<script>
+  // Close mobile nav when clicking a link
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.remove('open');
+    });
+  });
+  // Close nav when clicking outside
+  document.addEventListener('click', function(e) {
+    var nav = document.querySelector('.nav-links');
+    var btn = document.querySelector('.hamburger');
+    if (nav && nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn) {
+      nav.classList.remove('open');
+    }
+  });
+</script>
 
 </body>
 </html>
