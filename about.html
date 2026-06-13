@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="theme-color" content="#0f1923" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About – RideBill Pro</title>
   <meta name="description" content="About RideBill Pro. A transport billing app built for Indian taxi operators, fleet managers, and transport businesses." />
@@ -12,7 +13,7 @@
 
 <nav>
   <a href="index.html" class="nav-logo">RideBill<span>Pro</span></a>
-  <span class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</span>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="pricing.html">Pricing</a></li>
@@ -53,34 +54,34 @@
     </div>
 
     <h2 style="margin-top:48px;">App Details</h2>
-    <table style="width:100%;border-collapse:collapse;margin-top:16px;">
+    <table class="about-table">
       <tr style="border-bottom:1px solid var(--border);">
-        <td style="padding:12px 0;font-weight:600;width:40%;">App Name</td>
-        <td style="padding:12px 0;color:var(--muted);">RideBill Pro</td>
+        <td>App Name</td>
+        <td>RideBill Pro</td>
       </tr>
       <tr style="border-bottom:1px solid var(--border);">
-        <td style="padding:12px 0;font-weight:600;">Package Name</td>
-        <td style="padding:12px 0;color:var(--muted);">com.ridebillpro.app</td>
+        <td>Package Name</td>
+        <td>com.ridebillpro.app</td>
       </tr>
       <tr style="border-bottom:1px solid var(--border);">
-        <td style="padding:12px 0;font-weight:600;">Version</td>
-        <td style="padding:12px 0;color:var(--muted);">1.0.0</td>
+        <td>Version</td>
+        <td>1.0.0</td>
       </tr>
       <tr style="border-bottom:1px solid var(--border);">
-        <td style="padding:12px 0;font-weight:600;">Platform</td>
-        <td style="padding:12px 0;color:var(--muted);">Android 7.0+ (API 24+)</td>
+        <td>Platform</td>
+        <td>Android 7.0+ (API 24+)</td>
       </tr>
       <tr style="border-bottom:1px solid var(--border);">
-        <td style="padding:12px 0;font-weight:600;">Target SDK</td>
-        <td style="padding:12px 0;color:var(--muted);">Android 14 (API 34)</td>
+        <td>Target SDK</td>
+        <td>Android 14 (API 34)</td>
       </tr>
       <tr style="border-bottom:1px solid var(--border);">
-        <td style="padding:12px 0;font-weight:600;">Data Storage</td>
-        <td style="padding:12px 0;color:var(--muted);">Local only (Room / SQLite)</td>
+        <td>Data Storage</td>
+        <td>Local only (Room / SQLite)</td>
       </tr>
       <tr>
-        <td style="padding:12px 0;font-weight:600;">Contact</td>
-        <td style="padding:12px 0;color:var(--muted);"><a href="mailto:support@ridebillpro.app">support@ridebillpro.app</a></td>
+        <td>Contact</td>
+        <td><a href="mailto:support@ridebillpro.app">support@ridebillpro.app</a></td>
       </tr>
     </table>
 
@@ -145,6 +146,24 @@
     <span>v1.0.0 · com.ridebillpro.app</span>
   </div>
 </footer>
+
+
+<script>
+  // Close mobile nav when clicking a link
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.remove('open');
+    });
+  });
+  // Close nav when clicking outside
+  document.addEventListener('click', function(e) {
+    var nav = document.querySelector('.nav-links');
+    var btn = document.querySelector('.hamburger');
+    if (nav && nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn) {
+      nav.classList.remove('open');
+    }
+  });
+</script>
 
 </body>
 </html>
